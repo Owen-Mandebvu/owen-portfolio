@@ -1,41 +1,59 @@
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import Particles from "@tsparticles/react"
+import { useCallback } from "react"
+import { loadFull } from "tsparticles"
 
 export default function ParticlesBg() {
   const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
-  }, []);
+    await loadFull(engine)
+  }, [])
 
   return (
     <Particles
+      id="tsparticles"
       init={particlesInit}
       options={{
-        fullScreen: { enable: false },
-        background: {
-          color: { value: "transparent" }
+        fullScreen: {
+          enable: true,
+          zIndex: -10,
         },
+
+        background: {
+          color: {
+            value: "#000000",
+          },
+        },
+
         particles: {
           number: {
-            value: 60
+            value: 60,
           },
+
           color: {
-            value: "#00ffcc"
+            value: ["#00ffff", "#a855f7"],
           },
+
           links: {
             enable: true,
-            color: "#00ffcc",
-            distance: 150
+            distance: 150,
+            color: "#00ffff",
+            opacity: 0.3,
+            width: 1,
           },
+
           move: {
             enable: true,
-            speed: 1
+            speed: 1,
           },
+
+          opacity: {
+            value: 0.5,
+          },
+
           size: {
-            value: 2
-          }
-        }
+            value: { min: 1, max: 3 },
+          },
+        },
       }}
     />
-  );
+  )
 }
