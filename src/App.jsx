@@ -4,6 +4,7 @@ import ParticlesBg from "./components/ParticlesBg";
 import hyacinth from "./assets/hyacinth.jpeg"
 import enactus from "./assets/enactus.jpeg"
 import turnall from "./assets/turnall.jpg"
+import profilePic from "./assets/mypic.jpg"
 import { useState } from "react"
 
 export default function App() {
@@ -112,9 +113,13 @@ export default function App() {
           <div className="flex justify-center">
             <div className="w-[380px] h-[500px] rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl p-10 text-center">
 
-              <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-cyan-400 to-purple-600 flex items-center justify-center text-5xl font-black mb-8">
-                OM
-              </div>
+              <div className="w-44 h-44 mx-auto rounded-full overflow-hidden border-4 border-cyan-400 shadow-[0_0_45px_rgba(34,211,238,0.5)] mb-8 hover:scale-105 transition duration-500">
+  <img
+    src={profilePic}
+    alt="Owen Mandebvu"
+    className="w-full h-full object-cover"
+  />
+</div>
 
               <h2 className="text-3xl font-bold">Owen Mandebvu</h2>
               <p className="text-cyan-300 mb-10">
