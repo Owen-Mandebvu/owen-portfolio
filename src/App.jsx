@@ -1,6 +1,6 @@
 import ParticlesBg from "./components/ParticlesBg";
 //import mineSafety from "./assets/mine-safety.jpg"
-//import irrigation from "./assets/irrigation.jpg"
+import irrigation from "./assets/irrigation.jpeg"
 import hyacinth from "./assets/hyacinth.jpeg"
 import enactus from "./assets/enactus.jpeg"
 import turnall from "./assets/turnall.jpg"
@@ -22,7 +22,7 @@ export default function App() {
     {
       title: "Smart Irrigation System",
       desc: "IoT-based automated irrigation and remote monitoring for smart farming. This helps farmers to monitor irrigation remotely with manual override.",
-      image: "/src/assets/projects/irrigation.jpg"
+      image: irrigation
     },
     {
       title: "Hyacinth Pulp Making Plant at Van Leer Zimbabwe",
